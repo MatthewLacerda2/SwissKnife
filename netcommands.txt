@@ -1,0 +1,10 @@
+#just a cheat sheet
+
+curl google.com
+curl 192.168.0.1
+geoiplookup
+ifconfig
+dig
+traceroute
+nslookup
+nmap
