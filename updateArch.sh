@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "Updating Pacman..."
+echo "Updating Pacman now"
 echo ""
 
 sleep 1
@@ -9,12 +9,21 @@ sleep 1
 sudo pacman -Syu
 
 echo ""
-echo "Updating Yay..."
+echo "---Updating Yay now---"
 echo ""
 
-sleep 2
+sleep 3
 
-yay -Syu #doesnt run as 'sudo' as it can cause perma damage
+yay -Syu #dont run as 'sudo' as it can cause perma damage
+
+echo ""
+echo "Updating Flatpak..."
+echo ""
+
+sleep 3
+
+flatpak update
+flatpak repair
 
 echo ""
 echo "-------"
