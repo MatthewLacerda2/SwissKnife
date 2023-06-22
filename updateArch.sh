@@ -4,9 +4,10 @@ echo ""
 echo "*** Updating Pacman now"
 echo ""
 
-sleep 1
+sleep 2
 
 sudo pacman -Syu
+sudo pacman -Sc
 
 echo ""
 echo "*** Updating Yay now"
@@ -14,7 +15,7 @@ echo ""
 
 sleep 3
 
-yay -Syu #dont run as 'sudo' as it can cause perma damage
+yay -Syu # Don't run as 'sudo'. It can cause perma damage
 
 echo ""
 echo "*** Updating Flatpak now"
@@ -24,6 +25,18 @@ sleep 3
 
 flatpak update
 flatpak repair
+
+echo ""
+echo "***Updating LocateDB now"
+echo ""
+
+sudo updatedb
+
+echo ""
+echo "***Updating Firmwares now"
+echo ""
+
+sudo fwupd
 
 echo ""
 echo "-------"
