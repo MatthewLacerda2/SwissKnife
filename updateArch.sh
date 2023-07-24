@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "*** Updating Pacman now"
+echo -e "\e[32m*** Updating Pacman now\e[0m"
 echo ""
 
 sleep 2
@@ -10,7 +10,7 @@ sudo pacman -Syu
 sudo pacman -Sc
 
 echo ""
-echo "*** Updating Yay now"
+echo -e "\e[32m*** Updating Yay now\e[0m"
 echo ""
 
 sleep 3
@@ -18,7 +18,7 @@ sleep 3
 yay -Syu # Don't run as 'sudo'. It can cause perma damage
 
 echo ""
-echo "*** Updating Flatpak now"
+echo -e "\e[32m*** Updating Flatpak now\e[0m"
 echo ""
 
 sleep 3
@@ -27,13 +27,13 @@ flatpak update
 flatpak repair
 
 echo ""
-echo "***Updating LocateDB now"
+echo -e "\e[32m*** Updating LocateDB now\e[0m"
 echo ""
 
 sudo updatedb
 
 echo ""
-echo "***Updating Firmwares now"
+echo -e "\e[32m*** Updating Firmwares now\e[0m"
 echo ""
 
 sudo fwupd
@@ -41,5 +41,5 @@ sudo fwupd
 echo ""
 echo "-------"
 echo ""
-echo "You're set. But better not to linger here though, eh?"
+echo -e "\e[32m You're set. But better not to linger here though, eh?\e[0m"
 echo ""
