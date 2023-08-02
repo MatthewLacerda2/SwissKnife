@@ -36,8 +36,8 @@ echo ""
 echo -e "\e[32m*** Updating Firmwares now"
 echo ""
 
-#sudo fwupdtool get-upgrades
-#sudo fwupdtool upgrade
+sudo fwupdtool get-upgrades
+sudo fwupdtool upgrade
 
 echo ""
 echo ""
