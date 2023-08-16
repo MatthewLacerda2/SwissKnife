@@ -10,23 +10,6 @@ sudo pacman -Syu
 sudo pacman -Sc
 
 echo ""
-echo -e "\e[32m*** Updating Yay now"
-echo ""
-
-sleep 3
-
-yay -Syu # Don't run as 'sudo'. It can cause perma damage
-
-echo ""
-echo -e "\e[32m*** Updating Flatpak now"
-echo ""
-
-sleep 3
-
-flatpak update
-flatpak repair
-
-echo ""
 echo -e "\e[32m*** Updating LocateDB now"
 echo ""
 
@@ -38,6 +21,19 @@ echo ""
 
 sudo fwupdtool get-upgrades
 sudo fwupdtool upgrade
+
+echo ""
+echo -e "\e[32m*** Updating Yay now"
+echo ""
+
+yay -Syu # Don't run as 'sudo'. It can cause perma damage
+
+echo ""
+echo -e "\e[32m*** Updating Flatpak now"
+echo ""
+
+flatpak update
+flatpak repair
 
 echo ""
 echo ""
