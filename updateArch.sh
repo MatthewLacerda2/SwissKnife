@@ -1,13 +1,12 @@
 #!/bin/bash
 
 echo ""
-echo -e "\e[32m*** Updating Pacman now"
+sudo echo -e "\e[32m*** Updating Pacman now"
 echo ""
 
 sleep 2
 
 sudo pacman -Syu
-sudo pacman -Sc
 
 echo ""
 echo -e "\e[32m*** Updating LocateDB now"
@@ -35,11 +34,14 @@ echo ""
 flatpak update
 flatpak repair
 
+echo "-------"
 echo ""
-echo ""
+
+sudo pacman -Sc
+
+#echo ""
 echo "-------"
 echo ""
 notify-send -i ./arch.png "Arch Update" "Complete!"
 echo -e "\e[34mYou're set. But better not to linger here though, eh?"
-echo ""
 echo ""
