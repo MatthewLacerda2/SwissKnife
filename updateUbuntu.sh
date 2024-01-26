@@ -1,9 +1,7 @@
 #!/bin/bash
 
-sudo trash-empty
-
-echo ""
-echo "Updating..."
+sudo echo ""
+echo -e "\e[35mUpdating..."
 echo ""
 
 sleep 1
@@ -11,7 +9,7 @@ sleep 1
 sudo apt-get update
 
 echo ""
-echo "Upgrading..."
+echo -e "\e[35mUpgrading..."
 echo ""
 
 sleep 2
@@ -19,15 +17,23 @@ sleep 2
 sudo apt-get upgrade
 
 echo ""
-echo "Snap refreshing..."
+echo -e "\e[35mUpdating Firmware..."
+echo ""
+
+sudo fwupdtool get-upgrades
+sudo fwupdtool upgrade
+
+echo ""
+echo -e "\e[35mSnap refreshing..."
 echo ""
 
 sudo snap refresh
 
 echo ""
-echo "Snap Refreshed!"
+echo -e "\e[35mSnap Refreshed!"
 echo ""
 echo "--------"
 echo ""
-echo "You're all set. Better not to linger here, alright?"
+notify-send -i ./arch.png "Deb Update" "Complete!"
+echo -e "\e[32mYou're set. But better not to linger here though, eh?"
 echo ""
