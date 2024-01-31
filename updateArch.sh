@@ -9,6 +9,12 @@ sleep 2
 sudo pacman -Syu
 
 echo ""
+echo -e "\e[32m*** Updating npm now"
+echo ""
+
+sudo npm update -g
+
+echo ""
 echo -e "\e[32m*** Updating LocateDB now"
 echo ""
 
