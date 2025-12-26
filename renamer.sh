@@ -19,7 +19,7 @@ then
 	continue
 fi
 
-nome=$(echo $arq | awk -F. '{ print $1 }')
+nome="${arq%.*}"
 exte="${arq##*.}"
 
 diff=$(echo $nome | grep $arg1)
